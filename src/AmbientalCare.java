@@ -9,6 +9,7 @@ public class AmbientalCare {
 		prnt("4 - Plástico");
 		prnt("5 - Eletrônico");
 		prnt("6 - Radioativo");
+		prnt("7 - Orgânico");
 		opt = JOptionPane.showInputDialog(null, "Entre com o número da opção:");
 		
 		switch(opt) {
@@ -36,6 +37,10 @@ public class AmbientalCare {
 			case "6":
 				Radioativo radioativo = new Radioativo();
 				prnt("Categoria: " + radioativo.categoria + "\nDecomposição: " + radioativo.decomposicao + "\nMétodo de Reciclagem:" + radioativo.metodoReciclagem);
+			break;
+			case "7":
+				Organico organico = new Organico();
+				prnt("Categoria: " + organico.categoria + "\nDecomposição: " + organico.decomposicao + "\nMétodo de Reciclagem:" + organico.metodoReciclagem);
 			break;
 			default:
 				msgBox("Por favor, entre com uma opção.");
