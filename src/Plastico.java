@@ -1,5 +1,4 @@
 public class Plastico extends Lixo {
-	private String categoria, decomposicao, metodoReciclagem;
 
 	Plastico() {
 		this.categoria = "Plástico";
@@ -20,28 +19,5 @@ public class Plastico extends Lixo {
 				"- Embalagens de produtos de limpeza";
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public String getDecomposicao() {
-		return decomposicao;
-	}
-
-	public void setDecomposicao(String decomposicao) {
-		this.decomposicao = decomposicao;
-	}
-
-	public String getMetodoReciclagem() {
-		return metodoReciclagem;
-	}
-
-	public void setMetodoReciclagem(String metodoReciclagem) {
-		this.metodoReciclagem = metodoReciclagem;
-	}
 	
 }

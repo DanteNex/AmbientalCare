@@ -4,38 +4,36 @@ public class AmbientalCare {
 		int opt;
 		String texto;
 		String[] botoes = {"Papel", "Vidro", "Metal", "Plástico", "Eletrônico", "Radioativo", "Orgânico"};
-
-		JOptionPane.showMessageDialog(null, "Bem vindo ao AmbientalCare", "AmbientalCare", JOptionPane.PLAIN_MESSAGE);
- 		opt = JOptionPane.showOptionDialog(null, "Escolha o tipo de lixo para ser reciclado:", "AmbientalCare", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE, null, botoes, botoes);
+ 		opt = JOptionPane.showOptionDialog(null, "Bem vindo ao AmbientalCare\nEscolha o tipo de lixo para ser reciclado:", "AmbientalCare", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE, null, botoes, botoes);
 		
 		switch(opt) {
 			case 0:
 				Papel papel = new Papel();
-				texto = "Categoria: " + papel.getCategoria() + "\nDecomposição: " + papel.getDecomposicao() + "\nMétodo de Reciclagem: " + papel.getMetodoReciclagem();
+				texto = papel.toString();
 			break;
 			case 1:
 				Vidro vidro = new Vidro();
-				texto = "Categoria: " + vidro.getCategoria() + "\nDecomposição: " + vidro.getDecomposicao() + "\nMétodo de Reciclagem: " + vidro.getMetodoReciclagem();
+				texto = vidro.toString();
 			break;
 			case 2:
 				Metal metal = new Metal();
-				texto = "Categoria: " + metal.getCategoria() + "\nDecomposição: " + metal.getDecomposicao() + "\nMétodo de Reciclagem: " + metal.getMetodoReciclagem();
+				texto = metal.toString();
 			break;
 			case 3:
 				Plastico plastico = new Plastico();
-				texto = "Categoria: " + plastico.getCategoria() + "\nDecomposição: " + plastico.getDecomposicao() + "\nMétodo de Reciclagem: " + plastico.getMetodoReciclagem();
+				texto = plastico.toString();
 			break;
 			case 4:
 				Eletronico eletronico = new Eletronico();
-				texto = "Categoria: " + eletronico.getCategoria() + "\nDecomposição: " + eletronico.getDecomposicao() + "\nMétodo de Reciclagem: " + eletronico.getMetodoReciclagem();
+				texto = eletronico.toString();
 			break;
 			case 5:
 				Radioativo radioativo = new Radioativo();
-				texto = "Categoria: " + radioativo.getCategoria() + "\nDecomposição: " + radioativo.getDecomposicao() + "\nMétodo de Reciclagem: " + radioativo.getMetodoReciclagem();
+				texto = radioativo.toString();
 			break;
 			case 6:
 				Organico organico = new Organico();
-				texto = "Categoria: " + organico.getCategoria() + "\nDecomposição: " + organico.getDecomposicao() + "\nMétodo de Reciclagem: " + organico.getMetodoReciclagem();
+				texto = organico.toString();
 			break;
 			default:
 				texto = "Por favor, entre com uma opção válida.";
@@ -43,6 +41,11 @@ public class AmbientalCare {
 		}
 
 		JOptionPane.showMessageDialog(null, texto, "AmbientalCare", JOptionPane.PLAIN_MESSAGE);
+		int res = JOptionPane.showConfirmDialog(null, "Deseja realizar outra consulta?", "AmbientalCare", JOptionPane.OK_CANCEL_OPTION);
+		if(res == 0) {
+			main(null);
+		} 	
+
 	}
 	
 	public static void msgBox(String msg) {
