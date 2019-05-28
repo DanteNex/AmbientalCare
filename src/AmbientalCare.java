@@ -4,7 +4,7 @@ public class AmbientalCare {
 		int opt;
 		String texto;
 		String[] botoes = {"Papel", "Vidro", "Metal", "Plástico", "Eletrônico", "Radioativo", "Orgânico"};
- 		opt = JOptionPane.showOptionDialog(null, "Bem vindo ao AmbientalCare\nEscolha o tipo de lixo para ser reciclado:", "AmbientalCare", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE, null, botoes, botoes);
+ 		opt = caixaBotoes("Bem vindo ao AmbientalCare\nEscolha o tipo de lixo para ser reciclado:", botoes);
 		
 		switch(opt) {
 			case 0:
@@ -40,23 +40,26 @@ public class AmbientalCare {
 			break;
 		}
 
-		JOptionPane.showMessageDialog(null, texto, "AmbientalCare", JOptionPane.PLAIN_MESSAGE);
-		int res = JOptionPane.showConfirmDialog(null, "Deseja realizar outra consulta?", "AmbientalCare", JOptionPane.OK_CANCEL_OPTION);
+		caixaDialogo(texto);
+		int res = caixaConfirmar("Deseja realizar outra consulta?");
 		if(res == 0) {
 			main(null);
 		} 	
 
 	}
-	
-	public static void msgBox(String msg) {
-		JOptionPane.showMessageDialog(null, msg);
+
+	public static void caixaDialogo(String msg) {
+		JOptionPane.showMessageDialog(null, msg, "AmbientalCare", JOptionPane.PLAIN_MESSAGE);
 	}
 	
-	public static String inputBox(String msg) {
-		return JOptionPane.showInputDialog(null, msg);
+	public static int caixaConfirmar(String msg) {
+		int res = JOptionPane.showConfirmDialog(null, msg, "AmbientalCare", JOptionPane.OK_CANCEL_OPTION);
+		return res;
 	}
 	
-	public static void prnt(String msg) {
-		System.out.println(msg);
+	public static int caixaBotoes(String msg, String[] botoes) {
+ 		int opt = JOptionPane.showOptionDialog(null, msg, "AmbientalCare", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE, null, botoes, botoes);
+ 		return opt;
 	}
+	
 }

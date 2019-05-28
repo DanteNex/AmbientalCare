@@ -1,5 +1,4 @@
 public class Plastico extends Lixo {
-
 	Plastico() {
 		this.categoria = "Plástico";
 		this.decomposicao = "450 anos";
@@ -18,6 +17,4 @@ public class Plastico extends Lixo {
 				"- Peças plásticas de automóveis\r\n" + 
 				"- Embalagens de produtos de limpeza";
 	}
-
-	
 }
