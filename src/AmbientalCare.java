@@ -3,8 +3,11 @@ public class AmbientalCare {
 	public static void main(String args[]) {
 		int opt;
 		String texto;
+		String coisa;
 		String[] botoes = {"Papel", "Vidro", "Metal", "Plástico", "Eletrônico", "Radioativo", "Orgânico"};
  		opt = caixaBotoes("Bem vindo ao AmbientalCare\nEscolha o tipo de lixo para ser reciclado:", botoes);
+		
+		
 		
 		switch(opt) {
 			case 0:
